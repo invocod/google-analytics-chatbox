@@ -1,14 +1,7 @@
 require("dotenv").config();
 
 // ─── Environment Validation ─────────────────────────────
-const provider = process.env.AI_PROVIDER || "gemini";
-const requiredEnv = ["GOOGLE_APPLICATION_CREDENTIALS", "GA4_PROPERTY_ID"];
-
-if (provider.toLowerCase() === "groq") {
-  requiredEnv.push("GROQ_API_KEY");
-} else {
-  requiredEnv.push("GEMINI_API_KEY");
-}
+const requiredEnv = ["GOOGLE_APPLICATION_CREDENTIALS", "GA4_PROPERTY_ID", "ANTHROPIC_API_KEY"];
 
 const missing = requiredEnv.filter((key) => !process.env[key]);
 if (missing.length > 0) {
