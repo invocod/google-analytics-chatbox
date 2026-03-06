@@ -3,3 +3,6 @@ node_modules/
 .env.*
 credentials/
 .claude/
+.git/
+.gitignore
+nodemon.json

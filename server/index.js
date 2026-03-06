@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 require("dotenv").config();
 
 // ─── Environment Validation ─────────────────────────────
@@ -66,12 +67,6 @@ function authMiddleware(req, res, next) {
   const provided =
     req.headers.authorization?.replace("Bearer ", "") ||
     req.query.token;
-
-  // Debug logging (remove after fixing)
-  console.log("🔐 Auth Debug:");
-  console.log("  Expected token:", JSON.stringify(token));
-  console.log("  Provided token:", JSON.stringify(provided));
-  console.log("  Match:", provided === token);
 
   if (provided !== token) {
     return res.status(401).json({ error: "Unauthorized. Invalid access token." });

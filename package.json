@@ -1,20 +1,38 @@
 {
-  "name": "ga4-team-chat",
+  "name": "@invocod/google-analytics-chatbox",
   "version": "1.0.0",
   "description": "Ask questions about your Google Analytics data in plain English. Get instant insights powered by Claude AI.",
-  "main": "server/index.js",
+  "main": "lib/index.js",
+  "bin": {
+    "ga-chatbox": "server/index.js"
+  },
+  "files": [
+    "lib/",
+    "server/",
+    "public/",
+    "README.md"
+  ],
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invocod/google-analytics-chatbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/invocod/google-analytics-chatbox/issues"
+  },
+  "homepage": "https://github.com/invocod/google-analytics-chatbox#readme",
   "keywords": [
     "google-analytics",
     "ga4",
     "claude",
     "ai",
     "chatbot",
-    "analytics"
+    "analytics",
+    "laravel"
   ],
   "author": "INVOCOD Technologies",
   "license": "ISC",
