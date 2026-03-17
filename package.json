@@ -1,6 +1,6 @@
 {
-  "name": "@invocod/google-analytics-chatbox",
-  "version": "1.0.0",
+  "name": "google-analytics-ai-insights",
+  "version": "1.0.1",
   "description": "Ask questions about your Google Analytics data in plain English. Get instant insights powered by Claude AI.",
   "main": "lib/index.js",
   "bin": {
@@ -34,7 +34,7 @@
     "analytics",
     "laravel"
   ],
-  "author": "INVOCOD Technologies",
+  "author": "Amir Ayub",
   "license": "ISC",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.32.0",
@@ -50,5 +50,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
