@@ -1,6 +1,6 @@
 {
   "name": "google-analytics-ai-insights",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ask questions about your Google Analytics data in plain English. Get instant insights powered by Claude AI.",
   "main": "lib/index.js",
   "bin": {
