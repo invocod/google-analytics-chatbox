@@ -1,11 +1,11 @@
-# @invocod/google-analytics-chatbox
+# google-analytics-ai-insights
 
 Ask questions about your Google Analytics data in plain English. Get instant insights powered by Claude AI.
 
 ## Installation
 
 ```bash
-npm install @invocod/google-analytics-chatbox
+npm install google-analytics-ai-insights
 ```
 
 ## Environment Variables
@@ -39,7 +39,7 @@ const {
   createServer,
   queryGA4,
   processQuery,
-} = require("@invocod/google-analytics-chatbox");
+} = require("google-analytics-ai-insights");
 
 // Option 1: Start the full Express server (includes chat UI)
 const { app, server } = await createServer({ port: 3001 });
@@ -69,14 +69,14 @@ Run the chatbox as a sidecar Node service alongside your Laravel app.
 
 ```bash
 cd your-laravel-project
-npm install @invocod/google-analytics-chatbox
+npm install google-analytics-ai-insights
 ```
 
 **2. Create a start script** (`node-services/ga-chatbox.js`):
 
 ```js
 require("dotenv").config(); // loads your Laravel .env
-const { createServer } = require("@invocod/google-analytics-chatbox");
+const { createServer } = require("google-analytics-ai-insights");
 
 createServer({
   port: process.env.GA_CHATBOX_PORT || 3001,
