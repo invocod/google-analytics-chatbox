@@ -2,9 +2,12 @@
 require("dotenv").config();
 
 // ─── Environment Validation ─────────────────────────────
-const requiredEnv = ["GOOGLE_APPLICATION_CREDENTIALS", "GA4_PROPERTY_ID", "ANTHROPIC_API_KEY"];
+const requiredEnv = ["GA4_PROPERTY_ID", "ANTHROPIC_API_KEY"];
 
 const missing = requiredEnv.filter((key) => !process.env[key]);
+if (!process.env.GA_CREDENTIALS_JSON && !process.env.GOOGLE_APPLICATION_CREDENTIALS) {
+  missing.push("GOOGLE_APPLICATION_CREDENTIALS or GA_CREDENTIALS_JSON");
+}
 if (missing.length > 0) {
   console.error(`\nMissing required environment variables:\n  ${missing.join("\n  ")}\n`);
   console.error("Copy .env.example to .env and fill in all required values.\n");
